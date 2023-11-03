@@ -1,5 +1,6 @@
 package com.example.usertable
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ internal class MyAdapter(private var myDataSet: List<User>, val listener: MainAc
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     var selectedPosition = -1
+    private var SelectedView: View? = null
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
@@ -52,10 +54,12 @@ internal class MyAdapter(private var myDataSet: List<User>, val listener: MainAc
         }
         override fun onClick(v: View?) {
             val position = adapterPosition
+            SelectedView?.setBackgroundColor(Color.WHITE)
+            v?.setBackgroundColor(Color.RED)
+            SelectedView = v  ;
             if (position != RecyclerView.NO_POSITION) {
                 listener.onItemClick(position)
                 selectedPosition = position
-                v?.setBackgroundColor(1) ;
 
             }
         }

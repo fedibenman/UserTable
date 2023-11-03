@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
-<EditText
-    android:id="@+id/nameinput"
-    android:layout_height="15dp" android:layout_width="15dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
 
-</EditText>
+    <EditText
+        android:hint="enter name"
+        android:id="@+id/nameinput"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"></EditText>
 
-<EditText
-    android:id="@+id/lastNameinput"
-    android:layout_height="15dp" android:layout_width="15dp">
+    <EditText
+        android:hint="enter last name"
+        android:id="@+id/lastNameinput"
+        android:layout_width="match_parent"
+        android:layout_height="98dp">
 
-</EditText>
-<EditText
-    android:id="@+id/ageinput"
-    android:layout_height="15dp" android:layout_width="15dp">
+    </EditText>
 
-</EditText>
+    <EditText
+        android:hint="enter age"
+        android:id="@+id/ageinput"
+        android:layout_width="397dp"
+        android:layout_height="80dp">
+
+    </EditText>
 
 
 </LinearLayout>
